@@ -1,0 +1,224 @@
+/* Основные цвета */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+}
+
+/* Шрифты */
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+/* Размеры */
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* Анимация */
+.animated {
+    transition: all 0.3s ease-in-out;
+}
+
+.fadeIn {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Элементы взаимодействия с пользователем */
+button {
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+button:active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+input {
+    border: 1px solid var(--light-color);
+    padding: 5px;
+    margin-right: 5px;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+}
+
+/* Таблица слов */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid var(--light-color);
+    padding: 5px;
+}
+
+/* Карточка слова */
+.word-card {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid var(--light-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.word-card__english {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.word-card__transcription {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.word-card__russian {
+    font-size: 18px;
+    color: var(--success-color);
+}
+
+.word-card__show-translation-button {
+    cursor: pointer;
+    padding: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.word-card__translation {
+    font-size: 16px;
+    margin-top: 10px;
+    display: none;
+}
+
+.word-card--show-translation .word-card__translation {
+    display: block;
+}
+
+.word-card--show-translation .word-card__show-translation-button {
+    display: none;
+}
+
+/* Форма редактирования слова */
+.word-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.word-form input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid var(--light-color);
+}
+
+.word-form button {
+    cursor: pointer;
+    padding: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.word-form button:hover,
+.word-form button:focus {
+    background-color: var(--secondary-color);
+}
+
+.word-form button:active {
+    background-color: var(--danger-color);
+}
+
+/* Состояние редактирования */
+.word-row--editing {
+    background-color: var(--light-color);
+}
+
+.word-row--editing input {
+    border-color: var(--primary-color);
+}
+
+/* Карточки слов */
+.word-card {
+    border: 1px solid var(--light-color);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Кнопки сохранения и удаления */
+.word-card__button {
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+/* Кнопки сохранения и отмены */
+.word-row__button {
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.word-row__button--success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.word-row__button--danger {
+    background-color: var(--danger-color);
+    color: white;
+}
