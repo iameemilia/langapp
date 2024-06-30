@@ -1,0 +1,62 @@
+.word-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.word-list__button {
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.word-list__button--previous {
+    margin-right: auto;
+}
+
+.word-list__button--next {
+    margin-left: auto;
+}
+
+.word-list__button:hover,
+.word-list__button:focus {
+    background-color: var(--secondary-color);
+}
+
+.word-list__button:active {
+    background-color: var(--danger-color);
+}
+
+/* Анимация перелистывания карточек */
+.word-list-container {
+    animation: slide-in 0.5s ease-in forwards;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.word-list-container--out {
+    animation: slide-out 0.5s ease-out forwards;
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}

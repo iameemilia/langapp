@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const WordCard = ({ word }) => {
+const WordCard = ({ word, currentIndex, words }) => {
     const [showTranslation, setShowTranslation] = useState(false);
 
     const handleShowTranslationClick = () => {
@@ -15,6 +15,7 @@ const WordCard = ({ word }) => {
             <button className="word-card__show-translation-button" onClick={handleShowTranslationClick}>
                 {showTranslation ? "Скрыть перевод" : "Показать перевод"}
             </button>
+            <p className="word-card__number">{currentIndex + 1} / {words.length}</p>
         </div>
     );
 };
